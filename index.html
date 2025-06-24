@@ -75,7 +75,12 @@ video.addEventListener('ended', stopRave);
 <script>
   const video = document.getElementById('rave-video');
 
-  const startVisualizer = () => {
+  let visualizerStarted = false;
+
+  function startVisualizer() {
+    if (visualizerStarted) return;
+    visualizerStarted = true;
+
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const source = audioContext.createMediaElementSource(video);
     const analyser = audioContext.createAnalyser();
@@ -101,16 +106,16 @@ video.addEventListener('ended', stopRave);
     }
 
     animate();
-  };
+  }
 
   video.addEventListener('play', () => {
-    if (video.muted === false) {
+    if (!video.muted) {
       startVisualizer();
     }
   });
 
   video.addEventListener('volumechange', () => {
-    if (!video.muted) {
+    if (!video.muted && !video.paused) {
       startVisualizer();
     }
   });
