@@ -7,136 +7,144 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #eaf3ff;
+      background: #fdf5ff;
       font-family: 'Quicksand', sans-serif;
-      color: #1e1e1e;
+      color: #1c1c1c;
       margin: 0;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
 
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       margin-bottom: 0.2rem;
     }
 
     .back-link {
-      display: block;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       text-decoration: none;
-      background: #d0e4ff;
-      padding: 0.4rem 1rem;
+      display: inline-block;
+      background: #e3d5ff;
+      padding: 0.5rem 1.2rem;
       border-radius: 20px;
+      color: #3d216b;
+      font-weight: 600;
       font-size: 0.9rem;
-      color: #003366;
     }
 
-    .media-block {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .media-block img,
-    .media-block video,
-    .media-block iframe {
-      max-width: 48%;
+    .section {
+      background: #ffffff;
+      padding: 1.2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
     }
 
-    .media-block .text {
-      max-width: 48%;
-      font-size: 1rem;
-      line-height: 1.6;
+    .section.reverse {
+      flex-direction: row-reverse;
     }
 
-    audio {
-      width: 100%;
+    .section img,
+    .section iframe {
+      width: 50%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .section .text {
+      width: 50%;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .confession {
+      background: #fff0f8;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .confession-toggle {
+      text-align: center;
       margin-top: 1rem;
     }
 
-    #toggleConfession {
-      margin-top: 2rem;
-      background-color: #d0e4ff;
+    .confession-toggle button {
+      background: #e3d5ff;
       border: none;
       border-radius: 20px;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1rem;
       font-family: 'Quicksand', sans-serif;
       cursor: pointer;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #3d216b;
     }
 
-    #confession {
-      display: none;
-      margin-top: 1.2rem;
-      text-align: left;
-      background: #fff9fd;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section.reverse {
+        flex-direction: column;
+      }
+
+      .section img,
+      .section iframe,
+      .section .text {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="container">
     <a class="back-link" href="index.html">← back to home</a>
     <h1>suju dump (˶ᵔ ᵕ ᵔ˶)</h1>
 
-    <div class="media-block">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/x6QA3m58DQw" frameborder="0"
+    <div class="section">
+      <iframe height="250" src="https://www.youtube.com/embed/x6QA3m58DQw" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
       <div class="text">
-        <p><strong>"Sorry, Sorry" MV</strong></p>
-        <p>the song that altered our timelines. everything before this was grayscale.</p>
+        <p><strong>“Sorry, Sorry” MV</strong></p>
+        <p>the cultural shift that rewrote our DNA. you had to be there.</p>
       </div>
     </div>
 
-    <div class="media-block">
+    <div class="section reverse">
       <img src="https://i.ibb.co/9HrC5Jn/suju1.gif" alt="super junior gif" />
       <div class="text">
-        <p><strong>“the blueprint.”</strong></p>
-        <p>how is it legal for them to move in sync like this?</p>
+        <p><strong>“they’re not even in sync they’re just possessed.”</strong></p>
+        <p>this choreo has no business being that clean.</p>
       </div>
     </div>
 
-    <div class="media-block">
-      <img src="https://i.ibb.co/YWq7Z0J/suju2.jpg" alt="suju photo" />
+    <div class="section">
+      <img src="https://i.ibb.co/YWq7Z0J/suju2.jpg" alt="super junior photo" />
       <div class="text">
         <p><strong>“brain chemistry altered.”</strong></p>
-        <p>look at their silhouettes. we were not built to survive this era.</p>
+        <p>something about their silhouette in a lineup hits harder than it should.</p>
       </div>
     </div>
 
-    <div class="media-block">
-      <div class="text">
-        <p><strong>🎧 secret edit: nightcore sorry sorry</strong></p>
-        <p>play my unreleased files. don't tell leeteuk.</p>
-        <audio controls>
-          <source src="yourfilename.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <img src="https://i.ibb.co/kJ5nRms/suju-mic.jpg" alt="suju mic" />
+    <div class="confession-toggle">
+      <button onclick="toggleConfession()">click to open my mental spiral</button>
     </div>
-
-    <button id="toggleConfession">click to open my mental spiral</button>
-    <div id="confession">
+    <div id="confession" class="confession" style="display: none;">
       <p><strong>💭 confession:</strong></p>
       <p>heechul invented eyeliner. donghae should be illegal. when they do synchronized body rolls i literally forget the concept of time. they are the blueprint.</p>
       <p>sometimes i just watch “bonamana” stage clips and pretend it's 2010 again. i'm not okay.</p>
@@ -144,10 +152,10 @@
   </div>
 
   <script>
-    document.getElementById('toggleConfession').addEventListener('click', function () {
+    function toggleConfession() {
       const confession = document.getElementById('confession');
       confession.style.display = confession.style.display === 'none' ? 'block' : 'none';
-    });
+    }
   </script>
 </body>
 </html>
