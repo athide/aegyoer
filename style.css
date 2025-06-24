@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 200vh;
+  background-color: #fdf6f9;
+  font-family: 'Courier New', monospace;
+  color: #222;
+  overflow-x: hidden;
+}
+
+.username-wrapper {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s ease;
+  animation: fadein-wrapper 1s ease forwards;
+}
+
+.main-name {
+  font-size: 4rem;
+  opacity: 0;
+  animation: fadein-main 1.4s ease forwards;
+}
+
+.aka-name {
+  font-size: 1.2rem;
+  opacity: 0;
+  margin-top: 0.
