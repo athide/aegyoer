@@ -7,22 +7,31 @@
 
 body {
   background-color: #fff0f7;
-  font-family: 'DM Sans', 'Poppins', sans-serif;
+  font-family: 'Lexend', sans-serif;
   color: #222;
   overflow-x: hidden;
 }
 
-/* name header */
-.main-header {
+/* name block */
+.name-block {
   text-align: center;
-  padding: 4rem 0 2rem;
+  margin-top: 30vh;
 }
 
 .main-name {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0;
   animation: fadein-main 1.4s ease forwards;
+}
+
+.aka-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadein-aka 1.6s ease forwards;
+  animation-delay: 1s;
+  color: #555;
 }
 
 @keyframes fadein-main {
@@ -31,7 +40,13 @@ body {
   }
 }
 
-/* sticky nav */
+@keyframes fadein-aka {
+  to {
+    opacity: 1;
+  }
+}
+
+/* nav bar */
 .sticky-nav {
   display: flex;
   justify-content: center;
@@ -61,7 +76,7 @@ body {
   background: #ffcde6;
 }
 
-/* cluttercore zone */
+/* content section */
 .about-zone {
   max-width: 800px;
   margin: 3rem auto;
@@ -70,49 +85,4 @@ body {
   line-height: 2;
   color: #3e3e3e;
   text-align: center;
-}
-
-.name-block {
-  margin-top: 30vh;
-}
-
-.aka-name {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0;
-  animation: fadein-aka 1.6s ease forwards;
-  animation-delay: 1s;
-  color: #444;
-}
-
-@keyframes fadein-aka {
-  to {
-    opacity: 1;
-  }
-}
-
-
-
-  </script>
-</body>
-</html>
-
-.name-block {
-  text-align: center;
-  margin-top: 30vh;
-}
-
-.aka-name {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0;
-  animation: fadein-aka 1.6s ease forwards;
-  animation-delay: 1.2s;
-  color: #444;
-}
-
-@keyframes fadein-aka {
-  to {
-    opacity: 1;
-  }
 }
