@@ -5,72 +5,64 @@
 }
 
 body {
-  height: 200vh;
   background-color: #ffeef5;
   font-family: 'Lexend', sans-serif;
   color: #222;
   overflow-x: hidden;
 }
 
-/* Fade-In Name Wrapper */
+.spacer {
+  height: 100vh;
+}
+
 .username-wrapper {
-  position: absolute;
+  position: fixed;
   top: 40%;
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  transition: all 0.5s ease;
-  animation: fadein-wrapper 1s ease forwards;
-  z-index: 10;
+  z-index: 1000;
+  transition: all 0.6s ease;
+}
+
+body.scrolled .username-wrapper {
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #ffeef5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 .main-name {
   font-size: 4rem;
+  animation: fadein-main 1.2s forwards;
   opacity: 0;
-  animation: fadein-main 1.4s ease forwards;
 }
 
 .aka-name {
   font-size: 1.2rem;
-  opacity: 0;
   margin-top: 0.4rem;
-  animation: fadein-aka 1.4s ease forwards;
+  opacity: 0;
+  animation: fadein-aka 1.2s forwards;
   animation-delay: 1.4s;
 }
 
-/* Fade-in Keyframes */
 @keyframes fadein-main {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 @keyframes fadein-aka {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
-@keyframes fadein-wrapper {
-  to {
-    top: 40%;
-  }
-}
-
-/* Scrolled Behavior */
-body.scrolled .username-wrapper {
-  position: fixed;
-  top: 0;
-  background: #ffeef5;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Layout */
 .main-layout {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  padding: 3rem;
+  padding: 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -79,7 +71,6 @@ body.scrolled .username-wrapper {
   flex: 1;
 }
 
-/* Content Box */
 .content-links {
   background: #fff0f8;
   padding: 1.5rem;
@@ -111,4 +102,11 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    padding: 2rem;
+  }
 }
