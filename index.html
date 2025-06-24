@@ -129,6 +129,38 @@ video.addEventListener('ended', stopRave);
   });
 </script>
 
+<script>
+const video = document.getElementById('rave-video');
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const source = audioCtx.createMediaElementSource(video);
+const analyser = audioCtx.createAnalyser();
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+analyser.fftSize = 256;
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
+
+function animate() {
+  requestAnimationFrame(animate);
+  analyser.getByteFrequencyData(dataArray);
+
+  const bass = dataArray.slice(0, 20).reduce((a, b) => a + b, 0) / 20;
+
+  if (bass > 80 && !document.body.classList.contains('rave-intensity')) {
+    document.body.classList.add('rave-intensity');
+  } else if (bass <= 80 && document.body.classList.contains('rave-intensity')) {
+    document.body.classList.remove('rave-intensity');
+  }
+}
+
+video.onplay = () => {
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
+  }
+  animate();
+};
+</script>
+
   
 <body>
   <div class="hero">
