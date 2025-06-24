@@ -31,4 +31,36 @@ body {
 
 .aka-name {
   font-size: 1.2rem;
-  opacity
+  opacity: 0;
+  margin-top: 0.4rem;
+  animation: fadein-aka 1.2s ease forwards;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  text-decoration: none;
+}
+
+@keyframes fadein-main {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-aka {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-wrapper {
+  to {
+    top: 40%;
+  }
+}
+
+body.scrolled .username-wrapper {
+  position: fixed;
+  top: 0;
+  background: #ffe4f2;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
