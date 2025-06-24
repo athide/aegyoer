@@ -6,8 +6,8 @@
 
 body {
   height: 200vh;
-  background-color: #ffeef5; 
-  font-family: 'DM Sans', 'Poppins', sans-serif; 
+  background-color: #fff0f7;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
   color: #1a1a1a;
   overflow-x: hidden;
 }
@@ -19,8 +19,6 @@ body {
   text-align: center;
   transition: all 0.5s ease;
   animation: fadein-wrapper 1s ease forwards;
-  border: none;
-  box-shadow: none;
 }
 
 .main-name {
@@ -62,7 +60,7 @@ body {
 body.scrolled .username-wrapper {
   position: fixed;
   top: 0;
-  background: #ffeef5;
+  background: #fff0f7;
   padding: 1rem 0;
   box-shadow: none;
   border: none;
