@@ -1,4 +1,3 @@
-/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +6,12 @@
 
 body {
   height: 200vh;
-  background-color: #ffe4f2; /* pastel pink */
-  font-family: 'Inter', 'Helvetica Neue', sans-serif; /* modern + sleek */
+  background-color: #ffe4f2;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
   color: #1a1a1a;
   overflow-x: hidden;
 }
 
-/* username container */
 .username-wrapper {
   position: absolute;
   top: 40%;
@@ -23,51 +21,14 @@ body {
   animation: fadein-wrapper 1s ease forwards;
 }
 
-/* aegyoer text */
 .main-name {
   font-size: 4rem;
   font-weight: 600;
   opacity: 0;
   animation: fadein-main 1.2s ease forwards;
-  text-decoration: none; /* ✨ removes underline */
-}
-
-/* aka rar text */
-.aka-name {
-  font-size: 1.2rem;
-  opacity: 0;
-  margin-top: 0.4rem;
-  animation: fadein-aka 1.2s ease forwards;
-  animation-delay: 1.4s;
-  animation-fill-mode: forwards;
   text-decoration: none;
 }
 
-/* fade-in animations */
-@keyframes fadein-main {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein-aka {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein-wrapper {
-  to {
-    top: 40%;
-  }
-}
-
-/* sticky scroll effect */
-body.scrolled .username-wrapper {
-  position: fixed;
-  top: 0;
-  background: #ffe4f2;
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
+.aka-name {
+  font-size: 1.2rem;
+  opacity
