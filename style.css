@@ -1,53 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>aegyoer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- name header -->
-  <div class="username-wrapper">
-    <h1 class="main-name">aegyoer</h1>
-    <h2 class="aka-name">aka rar</h2>
-  </div>
+/* reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- main page content -->
-  <div class="main-page">
-    <section class="about">
-      <p>
-        i'm aegyoer. i make glitchy edits and cute chaos.<br>
-        mp3s, flacs, gifs, zipkits. kpop-core. kafka-coded.<br>
-        stay in the loop 🧷
-      </p>
-    </section>
+body {
+  background-color: #fff0f7;
+  font-family: 'DM Sans', 'Poppins', sans-serif;
+  color: #222;
+  overflow-x: hidden;
+}
 
-    <section class="nav">
-      <a href="#" class="nav-btn">tools</a>
-      <a href="#" class="nav-btn">tracks</a>
-      <a href="#" class="nav-btn">zine</a>
-      <a href="#" class="nav-btn">contact</a>
-    </section>
+/* name header */
+.main-header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
 
-    <footer class="footer">
-      <p>© aegyoer aka rar</p>
-      <p>
-        <a href="https://tumblr.com/yourblog">tumblr</a> ·
-        <a href="mailto:you@email.com">email</a>
-      </p>
-    </footer>
-  </div>
+.main-name {
+  font-size: 4rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadein-main 1.4s ease forwards;
+}
 
-  <!-- scroll script -->
-  <script>
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        document.body.classList.add('scrolled');
-      } else {
-        document.body.classList.remove('scrolled');
-      }
-    });
+@keyframes fadein-main {
+  to {
+    opacity: 1;
+  }
+}
+
+/* sticky nav */
+.sticky-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  background: #fff0f7;
+  z-index: 999;
+  border-top: 1px solid #f4d8e4;
+  border-bottom: 1px solid #f4d8e4;
+}
+
+.sticky-nav a {
+  font-size: 0.9rem;
+  padding: 0.4rem 1.2rem;
+  background: #ffd8ec;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: background 0.2s ease;
+}
+
+.sticky-nav a:hover {
+  background: #ffcde6;
+}
+
+/* cluttercore zone */
+.about-zone {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-size: 1rem;
+  line-height: 2;
+  color: #3e3e3e;
+  text-align: center;
+}
+
   </script>
 </body>
 </html>
