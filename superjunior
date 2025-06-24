@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Super Junior — aegyoer dump</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #eaf3ff;
+      font-family: 'Lexend', sans-serif;
+      color: #1e1e1e;
+      padding: 2rem;
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dump-section {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .dump-section img, .dump-section video {
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      background: #d0e4ff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div class="dump-section">
+    <a class="back-link" href="index.html">← back to home</a>
+    <h1>💙 super junior dump 💿</h1>
+    <p>every era is divine. every mv is a religion. here lives the mess:</p>
+
+    <!-- EXAMPLES (replace with your stuff!) -->
+    <img src="https://i.ibb.co/9HrC5Jn/suju1.gif" alt="super junior gif" />
+    <p><strong>“Sorry Sorry” live ver. hits harder than emotional memory.”</strong></p>
+
+    <video controls src="https://archive.org/download/superjunior-performance/suju_live.mp4"></video>
+    <p>💽 full-stage remix coming soon…</p>
+
+    <img src="https://i.ibb.co/YWq7Z0J/suju2.jpg" alt="suju photo" />
+    <p>“this pic lives rent-free in my serotonin receptors.”</p>
+
+    <!-- more pics, links, edits go here -->
+  </div>
+</body>
+</html>
