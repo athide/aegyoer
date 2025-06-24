@@ -1,125 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>aegyoer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- name header -->
+  <div class="username-wrapper">
+    <h1 class="main-name">aegyoer</h1>
+    <h2 class="aka-name">aka rar</h2>
+  </div>
 
-body {
-  height: 200vh;
-  background-color: #fff0f7;
-  font-family: 'DM Sans', 'Segoe UI', sans-serif;
-  color: #1a1a1a;
-  overflow-x: hidden;
-}
+  <!-- main page content -->
+  <div class="main-page">
+    <section class="about">
+      <p>
+        i'm aegyoer. i make glitchy edits and cute chaos.<br>
+        mp3s, flacs, gifs, zipkits. kpop-core. kafka-coded.<br>
+        stay in the loop 🧷
+      </p>
+    </section>
 
-.username-wrapper {
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  transition: all 0.5s ease;
-  animation: fadein-wrapper 1s ease forwards;
-}
+    <section class="nav">
+      <a href="#" class="nav-btn">tools</a>
+      <a href="#" class="nav-btn">tracks</a>
+      <a href="#" class="nav-btn">zine</a>
+      <a href="#" class="nav-btn">contact</a>
+    </section>
 
-.main-name {
-  font-size: 4rem;
-  font-weight: 500;
-  opacity: 0;
-  animation: fadein-main 1.2s ease forwards;
-  text-decoration: none;
-}
+    <footer class="footer">
+      <p>© aegyoer aka rar</p>
+      <p>
+        <a href="https://tumblr.com/yourblog">tumblr</a> ·
+        <a href="mailto:you@email.com">email</a>
+      </p>
+    </footer>
+  </div>
 
-.aka-name {
-  font-size: 1.2rem;
-  opacity: 0;
-  margin-top: 0.4rem;
-  animation: fadein-aka 1.2s ease forwards;
-  animation-delay: 1.4s;
-  animation-fill-mode: forwards;
-  text-decoration: none;
-}
-
-@keyframes fadein-main {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein-aka {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein-wrapper {
-  to {
-    top: 40%;
-  }
-}
-
-body.scrolled .username-wrapper {
-  position: fixed;
-  top: 0;
-  background: #fff0f7;
-  padding: 1rem 0;
-  box-shadow: none;
-  border: none;
-}
-
-body.scrolled .main-name,
-body.scrolled .aka-name {
-  text-decoration: none;
-}
-
-.main-page {
-  padding: 5rem 1rem 3rem;
-  text-align: center;
-}
-
-.about p {
-  font-size: 1rem;
-  line-height: 1.8;
-  max-width: 500px;
-  margin: 0 auto 4rem;
-  color: #3e3e3e;
-}
-
-.nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.nav-btn {
-  display: inline-block;
-  background: #ffd8ec;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #1a1a1a;
-  border-radius: 1.5rem;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: background 0.2s ease;
-}
-
-.nav-btn:hover {
-  background: #ffcde6;
-}
-
-.footer {
-  font-size: 0.8rem;
-  color: #777;
-}
-
-.footer a {
-  color: #999;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
+  <!-- scroll script -->
+  <script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
