@@ -266,3 +266,12 @@ body {
   display: block;
 }
 
+body.music-reactive {
+  animation: pulseGlow 2.8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%   { background-color: #fde6f0; }
+  50%  { background-color: #ffe9fa; }
+  100% { background-color: #fde6f0; }
+}
