@@ -7,15 +7,30 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="username-wrapper">
+  <!-- name -->
+  <header class="main-header">
     <h1 class="main-name">aegyoer</h1>
-    <h2 class="aka-name">aka rar</h2>
-  </div>
-<div style="height: 200vh; background: transparent;">
-  <p style="text-align:center; font-family: sans-serif; padding-top: 4rem;">scroll down</p>
-</div>
+  </header>
 
+  <!-- sticky nav -->
+  <nav class="sticky-nav">
+    <a href="#">tools</a>
+    <a href="#">about</a>
+    <a href="#">zine</a>
+    <a href="#">edits</a>
+  </nav>
 
+  <!-- main content -->
+  <main class="about-zone">
+    <p>
+      🍓 exo · glitch gifs · softboy energy · mp3 hoarding · super junior · unfinished zines · softpunk<br>
+      💌 pink plastic · cafe ambience · nct archives · sleeping in sunlight · unreleased edits<br>
+      🎮 archivecore · email folders · vocal chops · do not perceive me · file corruption as romance<br>
+      🧠 kafka but make it k-pop · terminally online · sonic clutter · tumblr css as spiritual practice
+    </p>
+  </main>
+
+  <!-- scroll script -->
   <script>
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
@@ -27,13 +42,3 @@
   </script>
 </body>
 </html>
-
-<script>
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      document.body.classList.add('scrolled');
-    } else {
-      document.body.classList.remove('scrolled');
-    }
-  });
-</script>
