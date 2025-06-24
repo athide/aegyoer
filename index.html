@@ -138,7 +138,7 @@ function animate() {
 
   const bass = dataArray.slice(0, 20).reduce((a, b) => a + b, 0) / 20;
 
-  if (bass > 80 && !document.body.classList.contains('rave-intensity')) {
+  if (bass > 10 && !document.body.classList.contains('rave-intensity')) {
     document.body.classList.add('rave-intensity');
   } else if (bass <= 80 && document.body.classList.contains('rave-intensity')) {
     document.body.classList.remove('rave-intensity');
