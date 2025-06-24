@@ -308,3 +308,19 @@ body.music-reactive {
   margin-top: 1rem;
 }
 
+body {
+  transition: background-color 0.5s ease;
+}
+
+.rave-intensity {
+  animation: raveBackground 0.4s infinite alternate;
+}
+
+@keyframes raveBackground {
+  0% { background-color: #1b001f; }
+  25% { background-color: #3b003f; }
+  50% { background-color: #5c002e; }
+  75% { background-color: #400037; }
+  100% { background-color: #1b001f; }
+}
+
