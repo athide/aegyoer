@@ -275,3 +275,13 @@ body.music-reactive {
   50%  { background-color: #ffe9fa; }
   100% { background-color: #fde6f0; }
 }
+
+#rave-video {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-top: 1rem;
+}
+
