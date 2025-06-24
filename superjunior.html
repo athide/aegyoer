@@ -91,3 +91,22 @@ allowfullscreen></iframe>
   </div>
 </body>
 </html>
+
+<!-- FAN CONFESSION DRAWER -->
+<button id="toggleConfession" style="margin-top: 2rem; background-color:#d0e4ff; border:none; border-radius:20px; padding:0.6rem 1rem; font-family:'Quicksand',sans-serif; cursor:pointer;">
+  click to open my mental spiral
+</button>
+
+<div id="confession" style="display:none; margin-top:1.2rem; text-align:left; background:#fff9fd; padding:1rem; border-radius:12px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+  <p><strong>💭 confession:</strong></p>
+  <p>heechul invented eyeliner. donghae should be illegal.</p>
+  <p>sometimes i just watch “bonamana” stage clips and pretend it's 2010 again. i'm not okay.</p>
+</div>
+
+<script>
+  document.getElementById('toggleConfession').addEventListener('click', function () {
+    const confession = document.getElementById('confession');
+    confession.style.display = confession.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
+
