@@ -257,3 +257,12 @@ body {
   border-radius: 12px;
 }
 
+.intro-video {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+}
+
