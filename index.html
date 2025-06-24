@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>aegyoer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <link rel="stylesheet" href="aegyoer/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="username-wrapper">
@@ -12,6 +12,7 @@
     <h2 class="aka-name">aka rar</h2>
   </div>
 
+  <!-- this creates space so scrolling works -->
   <div style="height: 200vh;"></div>
 
   <script>
@@ -25,20 +26,3 @@
   </script>
 </body>
 </html>
-  <div class="username-wrapper">
-    <h1 class="main-name">aegyoer</h1>
-    <h2 class="aka-name">aka rar</h2>
-  </div>
-
-  <div style="height: 200vh;"></div>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        document.body.classList.add('scrolled');
-      } else {
-        document.body.classList.remove('scrolled');
-      }
-    });
-  </script>
-</body>
