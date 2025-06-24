@@ -70,3 +70,56 @@ body.scrolled .main-name,
 body.scrolled .aka-name {
   text-decoration: none;
 }
+
+.main-page {
+  padding: 5rem 1rem 3rem;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 4rem;
+  color: #3e3e3e;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.nav-btn {
+  display: inline-block;
+  background: #ffd8ec;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: background 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #ffcde6;
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.footer a {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
