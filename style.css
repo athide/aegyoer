@@ -6,8 +6,8 @@
 
 body {
   height: 200vh;
-  background-color: #ffedf5; 
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #ffeef5; 
+  font-family: 'DM Sans', 'Poppins', sans-serif; 
   color: #1a1a1a;
   overflow-x: hidden;
 }
@@ -19,11 +19,13 @@ body {
   text-align: center;
   transition: all 0.5s ease;
   animation: fadein-wrapper 1s ease forwards;
+  border: none;
+  box-shadow: none;
 }
 
 .main-name {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 500;
   opacity: 0;
   animation: fadein-main 1.2s ease forwards;
   text-decoration: none;
@@ -60,9 +62,10 @@ body {
 body.scrolled .username-wrapper {
   position: fixed;
   top: 0;
-  background: #ffedf5;
+  background: #ffeef5;
   padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: none;
+  border: none;
 }
 
 body.scrolled .main-name,
