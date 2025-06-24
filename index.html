@@ -25,7 +25,54 @@
   }
 </script>
 
+<script>
+const video = document.getElementById('rave-video');
+let audioCtx, source, analyser, dataArray, rafId;
 
+function setupAudioAnalysis() {
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  source = audioCtx.createMediaElementSource(video);
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 256;
+  source.connect(analyser);
+  analyser.connect(audioCtx.destination);
+  dataArray = new Uint8Array(analyser.frequencyBinCount);
+}
+
+function animateRave() {
+  analyser.getByteFrequencyData(dataArray);
+
+  let bass = dataArray.slice(0, 10).reduce((a, b) => a + b, 0) / 10;
+  let mids = dataArray.slice(10, 40).reduce((a, b) => a + b, 0) / 30;
+  let highs = dataArray.slice(40, 80).reduce((a, b) => a + b, 0) / 40;
+
+  document.body.style.background = `radial-gradient(
+    circle at 20% 30%, 
+    rgba(255, ${50 + bass}, ${150 + highs}, 0.6), 
+    rgba(${100 + mids}, ${40 + highs}, 255, 0.4)
+  )`;
+
+  rafId = requestAnimationFrame(animateRave);
+}
+
+function startRave() {
+  if (!audioCtx) setupAudioAnalysis();
+  audioCtx.resume();
+  animateRave();
+}
+
+function stopRave() {
+  cancelAnimationFrame(rafId);
+  document.body.style.transition = 'background 2s ease';
+  document.body.style.background = '#fde6f0'; // your soft pink default
+}
+
+video.addEventListener('play', startRave);
+video.addEventListener('pause', stopRave);
+video.addEventListener('ended', stopRave);
+</script>
+
+  
 <body>
   <div class="hero">
     <div class="homepage-container">
