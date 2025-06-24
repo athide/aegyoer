@@ -6,6 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
+<script>
+  const video = document.querySelector('.intro-video');
+
+  if (video) {
+    video.addEventListener('play', () => {
+      document.body.classList.add('music-reactive');
+    });
+
+    video.addEventListener('pause', () => {
+      document.body.classList.remove('music-reactive');
+    });
+
+    video.addEventListener('ended', () => {
+      document.body.classList.remove('music-reactive');
+    });
+  }
+</script>
+
+
 <body>
   <div class="hero">
     <div class="homepage-container">
