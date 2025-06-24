@@ -16,3 +16,56 @@ body {
   position: absolute;
   top: 40%;
   width: 100%;
+  text-align: center;
+  transition: all 0.5s ease;
+  animation: fadein-wrapper 1s ease forwards;
+}
+
+.main-name {
+  font-size: 4rem;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadein-main 1.2s ease forwards;
+  text-decoration: none;
+}
+
+.aka-name {
+  font-size: 1.2rem;
+  opacity: 0;
+  margin-top: 0.4rem;
+  animation: fadein-aka 1.2s ease forwards;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  text-decoration: none;
+}
+
+@keyframes fadein-main {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-aka {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-wrapper {
+  to {
+    top: 40%;
+  }
+}
+
+body.scrolled .username-wrapper {
+  position: fixed;
+  top: 0;
+  background: #ffedf5; /* matches body background */
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.scrolled .main-name,
+body.scrolled .aka-name {
+  text-decoration: none; /* ❌ removes underline always */
+}
