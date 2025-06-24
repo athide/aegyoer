@@ -72,6 +72,26 @@ body {
   text-align: center;
 }
 
+.name-block {
+  margin-top: 30vh;
+}
+
+.aka-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadein-aka 1.6s ease forwards;
+  animation-delay: 1s;
+  color: #444;
+}
+
+@keyframes fadein-aka {
+  to {
+    opacity: 1;
+  }
+}
+
+
   </script>
 </body>
 </html>
