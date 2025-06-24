@@ -6,8 +6,8 @@
 
 body {
   height: 200vh;
-  background-color: #ffedf5; /* softer, lighter pink */
-  font-family: 'Poppins', 'Segoe UI', sans-serif; /* modern + cute */
+  background-color: #ffedf5; 
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
   color: #1a1a1a;
   overflow-x: hidden;
 }
@@ -60,12 +60,12 @@ body {
 body.scrolled .username-wrapper {
   position: fixed;
   top: 0;
-  background: #ffedf5; /* matches body background */
+  background: #ffedf5;
   padding: 1rem 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 body.scrolled .main-name,
 body.scrolled .aka-name {
-  text-decoration: none; /* ❌ removes underline always */
+  text-decoration: none;
 }
