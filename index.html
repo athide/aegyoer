@@ -163,51 +163,39 @@ video.addEventListener('play', () => {
 
   
 <body>
-  <div class="hero">
-    <div class="homepage-container">
-      
-  <source src="rave.mp4" type="video/mp4">
-</video>
-
-      <!-- LEFT SIDE: MEDIA / TEXT -->
-      <div class="left-side">
-        <h1 class="main-name">aegyoer</h1>
-        <h2 class="aka-name">aka rar</h2>
-        <p class="intro-text">i make weird edits + audio collages and pretend im real</p>
-      </div>
-
-      <div class="left-column">
-<video id="rave-video" src="homepagevideo.mp4" autoplay loop playsinline controls></video>
-</div>
-
-
-      <!-- RIGHT SIDE: PAGE LINKS -->
-      <div class="right-side">
-        <div class="link-box">
-          <a href="superjunior.html">💿 super junior dump</a>
-          <a href="exo.html">🩰 exo shrine</a>
-          <a href="nct.html">💚 nct loops</a>
-          <a href="tools.html">🛠️ tools</a>
-          <a href="zine.html">📓 zine</a>
-          <a href="about.html">💌 about</a>
-        </div>
-      </div>
-
+  <header>
+    <div class="username-wrapper">
+      <h1 class="main-name">aegyoer</h1>
+      <h2 class="aka-name">aka rar</h2>
+      <p class="brand-desc">
+        i make weird edits, videos, zines, and archives — click around and find what u weren’t looking for.
+      </p>
     </div>
-  </div>
-  video.addEventListener('play', startVisualizer);
-  video.addEventListener('volumechange', startVisualizer);
-</script>
+    <nav class="nav-links">
+      <a href="tools.html">tools</a>
+      <a href="exo.html">exo</a>
+      <a href="nct.html">nct</a>
+      <a href="shinee.html">shinee</a>
+      <a href="tvxq.html">tvxq</a>
+      <a href="superjunior.html">super junior</a>
+      <a href="zine.html">zine</a>
+      <a href="edits.html">edits</a>
+    </nav>
+  </header>
 
-<div class="video-container">
-  <video id="rave-video" autoplay loop muted>
-    <source src="ravevideo.mp4" type="video/mp4" />
-    your browser does not support the video tag
-  </video>
-  <div class="glitch-overlay"></div>
-</div>
+  <main>
+    <!-- main content can go here later -->
+  </main>
 
-
-
+  <script>
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        document.body.classList.add('scrolled');
+      } else {
+        document.body.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
+
 </html>
