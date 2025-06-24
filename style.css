@@ -285,3 +285,6 @@ body.music-reactive {
   margin-top: 1rem;
 }
 
+#rave-video::poster {
+  display: none;
+}
