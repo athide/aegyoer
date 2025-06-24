@@ -4,196 +4,53 @@
   <meta charset="UTF-8" />
   <title>aegyoer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Lexend', sans-serif;
-      background-color: #fbe9f0;
-      color: #222;
-      overflow-x: hidden;
-    }
-
-    header {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      transition: all 0.5s ease;
-    }
-
-    .username-wrapper {
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    .main-name {
-      font-size: 4rem;
-      font-weight: 600;
-      opacity: 0;
-      animation: fadeInText 1s ease forwards;
-    }
-
-    .aka-name {
-      font-size: 1.2rem;
-      margin-top: 0.3rem;
-      opacity: 0;
-      animation: fadeInText 1s ease forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes fadeInText {
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      to {
-        top: 0;
-      }
-    }
-
-    body.scrolled header {
-      position: fixed;
-      top: 0;
-      background-color: #fbe9f0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 1rem 0;
-      z-index: 999;
-    }
-
-    .page-content {
-      display: flex;
-      justify-content: space-between;
-      padding: 3rem;
-      gap: 2rem;
-    }
-
-    .media-section {
-      flex: 1;
-      background-color: #fff4f8;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .content-box {
-      flex: 1;
-      background-color: #fff4f8;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .content-box a {
-      display: block;
-      color: #444;
-      margin-bottom: 0.75rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .content-box a:hover {
-      color: #e91e63;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="username-wrapper">
-      <div class="username-wrapper" style="z-index: 1000;">
-      <h1 class="main-name">aegyoer</h1>
-      <h2 class="aka-name">aka rar</h2>
-    </div>
-<div class="main-layout">
-  <div class="media-section">
-    <!-- media goes here -->
-    <p>✨ Media coming soon... ✨</p>
+  <div class="username-wrapper">
+    <h1 class="main-name">aegyoer</h1>
+    <h2 class="aka-name">aka rar</h2>
   </div>
 
-  <div class="content-links">
-    <!-- dropdown links go here -->
-    <details>
-      <summary>SuJu</summary>
-      <ul>
-        <li><a href="superjunior.html">SuJu Dump</a></li>
-      </ul>
-    </details>
-    <details>
-      <summary>EXO</summary>
-      <ul>
-        <li><a href="exo.html">EXO Dump</a></li>
-      </ul>
-    </details>
-    <!-- Add more groups here -->
-  </div>
-</div>
-
-
-  <div class="links-box">
-    <details>
-      <summary>🎤 Super Junior</summary>
-      <ul>
-        <li><a href="superjunior.html">SuJu Dump</a></li>
-        <li><a href="#">MV Edits</a></li>
-        <li><a href="#">Gifs</a></li>
-      </ul>
-    </details>
-    <details>
-      <summary>👑 EXO</summary>
-      <ul>
-        <li><a href="#">EXO Dump</a></li>
-        <li><a href="#">Edits</a></li>
-        <li><a href="#">Dream Pages</a></li>
-      </ul>
-    </details>
-    <details>
-      <summary>🌟 SHINee</summary>
-      <ul>
-        <li><a href="#">Keyzone</a></li>
-        <li><a href="#">Edits</a></li>
-      </ul>
-    </details>
-    <details>
-      <summary>🎼 TVXQ</summary>
-      <ul>
-        <li><a href="#">Cassiopeia Dreams</a></li>
-      </ul>
-    </details>
-    <details>
-      <summary>🚗 NCT</summary>
-      <ul>
-        <li><a href="#">127</a></li>
-        <li><a href="#">Dream</a></li>
-        <li><a href="#">U</a></li>
-      </ul>
-    </details>
-  </div>
-</div>
-
-  </header>
-
-  <main class="page-content">
+  <div class="main-layout">
     <div class="media-section">
-      <p>💽 media dump coming soon... gifs, edits, sounds, chaos...</p>
+      <p>✨ media coming soon... ✨</p>
     </div>
-    <div class="content-box">
-      <a href="exo.html">EXO</a>
-      <a href="nct.html">NCT</a>
-      <a href="shinee.html">SHINee</a>
-      <a href="tvxq.html">TVXQ</a>
-      <a href="superjunior.html">Super Junior</a>
-      <a href="tools.html">Tools</a>
-      <a href="zine.html">Zine</a>
-      <a href="edits.html">Edits</a>
+
+    <div class="content-links">
+      <details>
+        <summary>super junior</summary>
+        <ul>
+          <li><a href="superjunior.html">suju dump</a></li>
+        </ul>
+      </details>
+      <details>
+        <summary>exo</summary>
+        <ul>
+          <li><a href="exo.html">exo dump</a></li>
+        </ul>
+      </details>
+      <details>
+        <summary>shinee</summary>
+        <ul>
+          <li><a href="#">shinee content soon</a></li>
+        </ul>
+      </details>
+      <details>
+        <summary>tvxq</summary>
+        <ul>
+          <li><a href="#">tvxq content soon</a></li>
+        </ul>
+      </details>
+      <details>
+        <summary>nct</summary>
+        <ul>
+          <li><a href="#">nct content soon</a></li>
+        </ul>
+      </details>
     </div>
-  </main>
+  </div>
 
   <script>
     window.addEventListener('scroll', () => {
