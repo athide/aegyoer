@@ -182,3 +182,36 @@ main {
   text-decoration: underline;
 }
 
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.media-section, .content-links {
+  flex: 1;
+}
+
+.content-links {
+  background: #fff0f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Lexend', sans-serif;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+details ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
