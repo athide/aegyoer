@@ -72,6 +72,58 @@ video.addEventListener('pause', stopRave);
 video.addEventListener('ended', stopRave);
 </script>
 
+<script>
+  const video = document.getElementById('rave-video');
+
+  const startVisualizer = () => {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioContext.createMediaElementSource(video);
+    const analyser = audioContext.createAnalyser();
+    const bg = document.body;
+
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+
+    analyser.fftSize = 256;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function animate() {
+      requestAnimationFrame(animate);
+      analyser.getByteFrequencyData(dataArray);
+      const average = dataArray.reduce((a, b) => a + b) / bufferLength;
+
+      const r = Math.min(255, Math.floor(average * 2));
+      const g = Math.min(255, 100 + Math.floor(average));
+      const b = Math.min(255, 150 + Math.floor(average / 2));
+
+      bg.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+
+    animate();
+  };
+
+  video.addEventListener('play', () => {
+    if (video.muted === false) {
+      startVisualizer();
+    }
+  });
+
+  video.addEventListener('volumechange', () => {
+    if (!video.muted) {
+      startVisualizer();
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      document.body.classList.add('scrolled');
+    } else {
+      document.body.classList.remove('scrolled');
+    }
+  });
+</script>
+
   
 <body>
   <div class="hero">
